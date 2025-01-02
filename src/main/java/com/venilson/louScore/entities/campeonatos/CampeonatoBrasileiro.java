@@ -18,8 +18,9 @@ public class CampeonatoBrasileiro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String nome;
-    private Integer rodadas = 0;
+    private Integer rodadas;
     @OneToMany
     private List<Equipe> equipes;
 }
