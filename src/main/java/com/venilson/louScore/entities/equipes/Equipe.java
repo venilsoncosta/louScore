@@ -1,10 +1,12 @@
 package com.venilson.louScore.entities.equipes;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.venilson.louScore.entities.campeonatos.CampeonatoBrasileiro;
 import com.venilson.louScore.entities.jogadores.Jogador;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,8 +23,7 @@ public class Equipe {
     private Long id;
     private String nome;
     private String estadio;
-    @OneToMany
-    private List<Jogador> jogadores;
+
     @ManyToOne
     private CampeonatoBrasileiro campeonatoBrasileiro;
 }
